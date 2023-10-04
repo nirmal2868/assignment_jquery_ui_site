@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery UI Website</title>
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <style>
+    #header {
+      display: flex;
+      background-color: black;
+      color: white;
+      top: 0;
+      right: 0;
+      position: fixed;
+      z-index: 3000;
+
+      width: 100%;
+
+    }
+
+    #main {
+      display: flex;
+
+    }
+
+    #fieldset1 {
+      width: 25%;
+      background-color: rgb(241, 240, 240);
+      position: fixed;
+      top: 110px;
+      left: 15px;
+    }
+
+
+
+    #tabs-1,
+    #tabs-2,
+    #tabs-3 {
+      width: 55%;
+      float: justify;
+
+    }
+
+    #tabs {
+      margin-top: 75px;
+
+    }
+
+    ul {
+      position: fixed;
+      top: 55px;
+      width: 100%;
+      z-index: 1;
+    }
+
+
+    .card {
+      display: flex;
+      text-align: center;
+      margin-left: 50%;
+
+    }
+
+    #accordion {
+      width: 25%;
+      background-color: rgb(241, 240, 240);
+      position: fixed;
+      right: 25px;
+      top: 110px;
+    }
+
+    #footer {
+      height: 75px;
+      background-color: aliceblue;
+      color: black;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+
+    #loc {
+      display: flex;
+      margin-right: 35px;
+      padding: 20px 0px;
+    }
+
+    #social {
+      font-size: 35px;
+      margin: 0px 50px;
+    }
+
+    #copyright {
+      padding: 20px 0px;
+    }
+  </style>
+
+  <script>
+    $(function () {
+      $("#tabs").tabs();
+    });
+
+    $(function () {
+      $("input").checkboxradio();
+    });
+
+    $(function () {
+      $("#accordion").accordion();
+    });
+
+  </script>
+</head>
+
+<body>
+
+
+  <div id="header">
+    <h1>Education</h1>
+    <a href="#" style="margin-left: 1000px; margin-top:10px; color:white">Login/Signup</a>
+  </div>
+
+
+  <div id="tabs">
+
+    <ul>
+      <li><a href="#tabs-1">Home</a></li>
+      <li><a href="#tabs-1">Our Courses</a></li>
+      <li><a href="#tabs-1">Contact Us</a></li>
+    </ul>
+    <div id="main">
+      <fieldset id="fieldset1">
+        <legend>Filter</legend>
+
+        <label for="checkbox-1">Web Design & Development</label>
+        <input type="checkbox" name="checkbox-1" id="checkbox-1">
+        <label for="checkbox-2">Android Development using Kotlin</label>
+        <input type="checkbox" name="checkbox-2" id="checkbox-2">
+        <label for="checkbox-3">Artificial Intelligence with Python</label>
+        <input type="checkbox" name="checkbox-3" id="checkbox-3">
+        <label for="checkbox-4">Cloud Computing and Devops</label>
+        <input type="checkbox" name="checkbox-4" id="checkbox-4">
+      </fieldset>
+
+      <div id="tabs-1">
+        <div class="card" id="webdesign" style="width: 32rem;">
+          <img src="images/web design.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Web Design & Development</h5>
+            <a href="#" class="btn btn-primary">Know More</a>
+          </div>
+        </div>
+        <div class="card" id="android" style="width: 32rem;">
+          <img src="images/android design.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Android Development</h5>
+            <a href="#" class="btn btn-primary">Know More</a>
+          </div>
+        </div>
+
+        <div class="card" id="ai" style="width: 32rem;">
+          <img src="images/AI.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Artificial Intelligence</h5>
+            <a href="#" class="btn btn-primary">Know More</a>
+          </div>
+        </div>
+
+        <div class="card" id="cloud" style="width: 32rem;">
+          <img src="images/cloud_devops.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cloud Computing</h5>
+            <a href="#" class="btn btn-primary">Know More</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="accordion">
+        <h3>Why Choose Us ?</h3>
+        <div>
+          <p>
+            Student Satisfaction Rate till Date, We believe education is a path not a destination,Grow your skills and
+            better opportunities you will find.Our courses are designed to equip you with the necessary skills and
+            knowledge to land your dream job in fields such as Cloud Computing, DevOps, Cyber Security, Full Stack
+            Development, Data Science, Digital Marketing, and Web Development.
+          </p>
+        </div>
+        <h3>Faculty</h3>
+        <div>
+          <p>
+            Our team of excellent trainers comprises experienced working professionals who possess real-time experience
+            in their respective domains. With their expertise, they will provide you with the best guidance and support
+            to ensure that you learn the latest technologies and tools that are in demand in the industry. Our company
+            was established in 2013, almost a decade ago, and we have trained more than 10,000 students in various
+            technologies.
+          </p>
+        </div>
+        <h3>Placements</h3>
+        <div>
+          <p>
+            We understand the importance of finding a job after completing a course, and that's why we provide placement
+            assistance to our students. We have a dedicated placement cell that works closely with top companies in the
+            industry to ensure that our students get placed in the best companies with competitive salaries.
+          </p>
+          <ul>
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+          </ul>
+        </div>
+        <h3>Testimonial</h3>
+        <div>
+          <p>
+            The mentors at Education helped us enhance my academic and interpersonal skills. I am thankful to Training &
+            Placement cell for providing a platform to enhance my skills and an opportunity to showcase them. In the
+            last I am saying that The World is here at Sharda University."
+
+            B.Tech (CSE) , 2017-2021
+
+            Placed In : FICO
+          </p>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div id="footer">
+
+    <div id="loc">
+      <i class="bi bi-geo-alt"></i>
+      <p>Shillong, Meghalaya, India</p>
+    </div>
+    <div id="social">
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-whatsapp"></i>
+    </div>
+    <div id="copyright">
+      <p>Copyright @ www.education.com</p>
+    </div>
+  </div>
+</body>
+
+</html>
